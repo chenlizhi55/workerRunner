@@ -16,7 +16,7 @@
 首先将该工程，导出成jar包：workerRunner.jar
 
 测试使用：
-### Springboot工程接入步骤：
+### 一.Springboot工程接入步骤：
 * 引入jar包：workerRunner.jar，通常为lib文件夹下
 * 启动类添加注解：
  <pre><code>
@@ -31,14 +31,14 @@
  </code></pre>
 * 启动应用，浏览器访问ip:port//work/beanName/methodName,worker调用执行成功
 
-### SpringMvc工程接入步骤(web版本需3.0及以上)：
+### 二.SpringMvc工程接入步骤(web版本需3.0及以上)：
 * 引入jar包:workerRunner.jar，通常为lib文件夹下
 * spring-config.xml中添加注解扫描：
  ```xml
     <context:component-scan base-package="com.chen.worker.test.servlet"/>
  ```
 * 启动应用，浏览器访问ip:port//work/beanName/methodName,worker调用执行成功
-### SpringMvc工程接入步骤(web版本需3.0以下)：
+### 三.SpringMvc工程接入步骤(web版本需3.0以下)：
 * 在web.xml中添加servlet配置：
 ```xml
   <servlet>
